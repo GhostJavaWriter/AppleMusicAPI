@@ -1,6 +1,6 @@
 #  TODO:
 
-- Add source controll
++ Add source controll
 - UICollectionView: read and do it
 - Add API
 - Search history

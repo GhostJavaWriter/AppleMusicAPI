@@ -9,8 +9,17 @@ import UIKit
 
 class SearchViewController: UIViewController, UISearchBarDelegate {
 
-    let searchBarView: UISearchBar = {
+    lazy var searchBarView: UISearchBar = {
         let view = SearchBarView(frame: .zero)
+        return view
+    }()
+    
+    lazy var resultsView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        //layout.sectionInset
+        //layout.itemSize
+        
+        let view = ResultsCollectionView(frame: .zero, collectionViewLayout: layout)
         return view
     }()
     
@@ -35,6 +44,15 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         searchBarView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         searchBarView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         searchBarView.heightAnchor.constraint(equalToConstant: Constants.heightOfSearchBar.rawValue).isActive = true
+        
+        //add collectionView
+        view.addSubview(resultsView)
+        
+        resultsView.translatesAutoresizingMaskIntoConstraints = false
+        resultsView.topAnchor.constraint(equalTo: searchBarView.bottomAnchor).isActive = true
+        resultsView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        resultsView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        resultsView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     
     // MARK: - UISearchBarDelegate

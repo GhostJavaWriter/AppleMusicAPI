@@ -54,6 +54,15 @@
 			path = Contoller;
 			sourceTree = "<group>";
 		};
+		88410A9D26F8B21000EC0698 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88410A8C26F76B2600EC0698 /* ResultsCollectionView.swift */,
+				88E20B5426ECE86600DAC246 /* SearchBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		88E20B2826ECCFD600DAC246 = {
 			isa = PBXGroup;
 			children = (
@@ -75,9 +84,8 @@
 			children = (
 				88E20B3426ECCFD600DAC246 /* AppDelegate.swift */,
 				88410A9B26F76E4B00EC0698 /* Contoller */,
-				88410A8C26F76B2600EC0698 /* ResultsCollectionView.swift */,
+				88410A9D26F8B21000EC0698 /* View */,
 				88E20B5726ECEABB00DAC246 /* Constants.swift */,
-				88E20B5426ECE86600DAC246 /* SearchBarView.swift */,
 				88E20B3D26ECCFD800DAC246 /* Assets.xcassets */,
 				88E20B3F26ECCFD800DAC246 /* LaunchScreen.storyboard */,
 				88410A9826F76C7000EC0698 /* TodoList.md */,
